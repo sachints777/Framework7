@@ -33,11 +33,11 @@ public class ToCreateContactTest extends BaseClass {
 		ccp.getLastnameTextfield().sendKeys(lastname);
 		ccp.getSavebutton().click();
 
-		Assert.fail(); // test case failure
+		//Assert.fail(); // test case failure
 
 		ContactsInfoPage cip = new ContactsInfoPage(driver);
 		String title = cip.getContactVerification().getText();
-		Assert.fail();
+		//Assert.fail();
 
 		Assert.assertTrue(title.contains(lastname));
 		Reporter.log(title + "Contact created successfully");
